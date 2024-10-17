@@ -57,8 +57,8 @@ const userLogin = async (req, res) => {
         const token = setUser({ user });
         res.cookie('token', token, {
             httpOnly: true,
-            secure:false,
-            sameSite: 'Lax', 
+            secure:true,
+            sameSite: 'strict', 
         });
         res.status(200).json({ data: user });
     } catch (error) {
