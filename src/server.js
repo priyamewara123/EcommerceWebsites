@@ -6,7 +6,7 @@ const { MongoDbConnection } = require('./helper/db');
 require("dotenv").config()
 const app = express();
 app.use(cors({
-  origin: ["https://famous-froyo-47930d.netlify.app/", "http://localhost:5173"],
+  origin: ["https://famous-froyo-47930d.netlify.app", "http://localhost:5173"],
   credentials: true, 
 }));
 app.use(bodyParser.json());
